@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Lista de Tareas - Gestor</title>
+  <link rel="stylesheet" href="lista.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+  <header>
+    <h2>Gestor de tareas</h2>
+  </header>
+
+  <main>
+    <div class="botones botones-lista">
+      <button type="button" id="cancelar" onclick="location.href='index.html'">Añadir Nueva Tarea</button>
+    </div>
+
+    <!--lista de tareas con busqueda y un filtro-->
+    <section class="tarjeta">
+      <h1>Lista de tareas</h1>
+
+      <div class="filtros">
+        <input type="text" id="buscar" placeholder="Buscar por nombre">
+        <select id="filtroEstado">
+          <option value="">Todos los estados</option>
+          <option>Pendiente</option>
+          <option>En proceso</option>
+          <option>Terminada</option>
+        </select>
+      </div>
+
+      <div class="tabla-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Descripción</th>
+              <th>Estado</th>
+              <th>Cambiar estado</th>
+            </tr>
+          </thead>
+          <tbody id="cuerpoTabla"></tbody>
+        </table>
+      </div>
+      <p id="vacio" class="gris">No hay tareas para mostrar.</p>
+    </section>
+  </main>
+
+  <script src="lista.js"></script>
+</body>
+</html>

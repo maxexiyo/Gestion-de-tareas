@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Gestor de tareas</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+  <header>
+    <h2>Gestor de tareas</h2>
+  </header>
+
+  <main>
+    <!--formulario para registrar una tarea-->
+    <form id="formulario" class="tarjeta" action="http://localhost:3000/tareas" method="POST">
+      <h1 id="titulo">Registro de tarea</h1>
+      <p class="gris">Llena los datos de la actividad del empleado.</p>
+
+      <div class="campo">
+        <label for="nombre">Nombre *</label>
+        <input type="text" id="nombre" name="nombre">
+        <small id="errorNombre"></small>
+      </div>
+
+      <div class="campo">
+        <label for="descripcion">Descripción *</label>
+        <textarea id="descripcion" name="descripcion" rows="3"></textarea>
+        <small id="errorDescripcion"></small>
+      </div>
+
+      <div class="campo">
+        <label for="estado">Estado</label>
+        <select id="estado" name="estado">
+          <option>Pendiente</option>
+          <option>En proceso</option>
+          <option>Terminada</option>
+        </select>
+      </div>
+
+      <p id="mensaje"></p>
+
+      <div class="botones">
+        <button type="button" id="cancelar" onclick="location.href='lista.html'">Ver Lista de Tareas</button>
+        <button type="submit" id="guardar">Registrar tarea</button>
+      </div>
+    </form>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
